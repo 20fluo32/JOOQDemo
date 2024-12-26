@@ -40,6 +40,7 @@ tasks.withType<KotlinCompile> {
     }
 }
 
+//JOOQ代码生成器配置
 tasks.register("JOOQ_Code_Generate") {
     doLast {
         val config: org.jooq.meta.jaxb.Configuration = Configuration()
@@ -72,7 +73,7 @@ tasks.register("JOOQ_Code_Generate") {
                     .withTarget(
                         org.jooq.meta.jaxb.Target()
                             .withPackageName("com.jooq.data")
-                            .withDirectory("D:/IDEA_WORK/demo2/src/main/kotlin")
+                            .withDirectory("D:/IDEA_WORK/demo2/src/main/kotlin") // 使用全路径
                     )
             )
         GenerationTool.generate(config)
