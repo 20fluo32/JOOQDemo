@@ -101,18 +101,18 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-jooq")
+//    implementation("org.springframework.boot:spring-boot-starter-jooq")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.projectlombok:lombok")
-    runtimeOnly("mysql:mysql-connector-java:8.0.27")
+//    runtimeOnly("mysql:mysql-connector-java:8.0.27")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation("org.jooq:jooq:3.19.15")
-    implementation("org.jooq:jooq-codegen:3.19.15")
-    implementation("org.jooq:jooq-meta:3.19.15")
+//    implementation("org.jooq:jooq:3.19.15")
+//    implementation("org.jooq:jooq-codegen:3.19.15")
+//    implementation("org.jooq:jooq-meta:3.19.15")
     implementation("com.xiaoleilu:hutool-core:3.3.2")
 }
 
