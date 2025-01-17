@@ -19,7 +19,7 @@ class Demo2ApplicationTests {
 //    }
 
     @Test
-    fun test2(){
+    fun test2() {
         val path = "/d4241b/pypiL1/packages/awesome-package/0.1.0/awesome_package-0.1.0-py3-none-any.whl"
         val pathMatcher = AntPathMatcher()
         var extractUriTemplateVariables = pathMatcher.extractUriTemplateVariables(PYPI_PACKAGES_MAPPING_URI, path)
@@ -27,7 +27,12 @@ class Demo2ApplicationTests {
         val repoName = extractUriTemplateVariables["repoName"]
         val name = extractUriTemplateVariables["name"]
         val version = extractUriTemplateVariables["version"]
+
+        // extractPathWithinPattern
+        // 得到模式匹配的映射部分，找出*或者?匹配上的那一段路径以及后续路径
+        val artifactUri = pathMatcher.extractPathWithinPattern(PYPI_PACKAGES_MAPPING_URI, path)
         println("projectId: $projectId, repoName: $repoName, name: $name, version: $version")
+        println(artifactUri)
 //        println(path)
     }
 
